@@ -1,13 +1,11 @@
-// Create two variables:
-// myLeads -> should be assigned to an empty array
-// inputEl -> should be assigned to the text input field
+// Push the value "www.awesomelead.com" to myArray when the input button is clicked
 
 let myLeads = []
 const inputEl = document.getElementById("input-el")
 const inputBtnEl = document.getElementById("input-btn")
 
 inputBtnEl.addEventListener("click", function() {
-    console.log("button clicked!")
+    myLeads.push("www.awesomelead.com")
 })
 
 
