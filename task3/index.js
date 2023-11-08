@@ -1,6 +1,7 @@
 let myLeads = []
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
+const deleteBtn = document.getElementById("delete-btn")
 const ulEl = document.getElementById("ul-el")
 
 let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
@@ -10,8 +11,11 @@ if (leadsFromLocalStorage) {
     renderLeads()
 }
 
-// 1. Check if leadsFromLocalStorage is truthy
-// 2. If so, set myLeads to its value and call renderLeads()
+deleteBtn.addEventListener("dblclick", function() {
+    myLeads = []
+    localStorage.clear()
+    renderLeads()
+})
 
 inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value)
